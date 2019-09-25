@@ -17,10 +17,10 @@ def reduce(source_array, starting_point = nil)
     new = []
     
     if starting_point 
-      total = source_array[i]
+      total = starting_point
       i = 0
     else
-      total = starting_point
+      total = source_array[0]
       i = 1
    end
    
