@@ -12,18 +12,18 @@ def map(source_array)
   end
 end
 
-def reduce(source_array, sv = nil)
+def reduce(array, sv = nil)
   if block_given?
     if sv 
       sum = sv
       i = 0
     else
-      sum = source_array[0]
+      sum = array[0]
       i = 1
    end
    
-    while i < source_array.length do
-      yield sum, source_array[i]
+    while i < array.length do
+      yield sum, array[i]
       i += 1
    end
     return sum
