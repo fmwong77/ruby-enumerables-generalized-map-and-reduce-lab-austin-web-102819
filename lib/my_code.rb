@@ -16,8 +16,6 @@ def reduce(source_array, starting_point = nil)
   if block_given?
     new = []
     
-    
-    
     if starting_point 
       total = source_array[i]
       i = 0
