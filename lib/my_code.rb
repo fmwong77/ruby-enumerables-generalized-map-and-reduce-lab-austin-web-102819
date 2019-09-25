@@ -12,14 +12,16 @@ def map(source_array)
   end
 end
 
-def reduce(source_array, starting_point = 0)
+def reduce(source_array, starting_point = nil)
   if block_given?
     new = []
     i = 0
-    total = starting_point
     
-    if source_array.all? return source_array.all?
+    
+    if starting_point == nil
+      total = source_array[i]
   else
+    total = starting_point
     while i < source_array.length do
       total = yield source_array[i], starting_point
       i += 1
