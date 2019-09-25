@@ -26,7 +26,7 @@ def reduce(array, sv = nil)
       yield(sum, array[i])
       i += 1
    end
-    return sum
+  sum
   else
     puts "Hey! No block was given!"
   end
