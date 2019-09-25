@@ -20,14 +20,15 @@ def reduce(source_array, starting_point = nil)
     
     if starting_point == nil
       total = source_array[i]
-  else
-    total = starting_point
+    else
+      total = starting_point
+   end
+   
     while i < source_array.length do
-      total = yield source_array[i], starting_point
+      yield starting_point, source_array[i]
       i += 1
-    end
+   end
     return total
-  end
   else
     puts "Hey! No block was given!"
   end
