@@ -15,13 +15,15 @@ end
 def reduce(source_array, starting_point = nil)
   if block_given?
     new = []
-    i = 0
+    
     
     
     if starting_point == nil
       total = source_array[i]
+      i = 0
     else
       total = starting_point
+      i = 1
    end
    
     while i < source_array.length do
